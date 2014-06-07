@@ -1,9 +1,9 @@
 greaterThan(QT_MAJOR_VERSION, 4):QT += widgets webkitwidgets
 
 # Add more folders to ship with the application, here
-folder_01.source = html
-folder_01.target = .
-DEPLOYMENTFOLDERS = folder_01
+folder_01.source = ..
+folder_01.target = ..
+DEPLOYMENTFOLDERS = ..
 
 # Define TOUCH_OPTIMIZED_NAVIGATION for touch optimization and flicking
 #DEFINES += TOUCH_OPTIMIZED_NAVIGATION
