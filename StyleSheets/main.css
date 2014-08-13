@@ -1,14 +1,19 @@
 h1
 {
     margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
 }
 
 header
 {
     color: rgb(200, 200, 200);
-    background-color: rgba(25,80,55,1);
-    height: auto;
+    background-color: rgba(25,80,55,0.8);
+    margin-bottom: 10px;
+    padding: 0px;
+    height: 95px;
+    width: 100%;
+    position: fixed;
 }
 
 body
@@ -17,36 +22,28 @@ body
     text-align: center;
     color: rgb(200, 200, 200);
 
-    background-image: url(Screenshot%20from%202014-06-02%2010:55:30.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
     background-attachment: fixed;
 }
 
+
 .text
 {
     display: inline-block;
-    background-color: rgba(25,80,55,0.6);
+    background-color: rgba(25,80,55,0.8);
     max-width: 600px;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 100px;
     padding: 10px;
     text-align: center;
 }
 
-.navigation
-{
-    font-size: 25px;
-}
-
 a:link
 {
-    color: yellow;
-    background-color: green;
-    padding: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
+    color: blue;
 }
 
 a:visited
@@ -54,7 +51,37 @@ a:visited
     color: orange;
 }
 
-a:active
+a.one:link
+{
+    margin: 3px;
+    color: yellow;
+    background-color: rgba(0,0,0,0);
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+a.one:visited
 {
     color: orange;
+}
+
+a.one:hover
+{
+    margin: 0px;
+    background-color: green;
+    border: outset;
+    border-color: rgb(0, 155, 0);
+}
+
+a.one:active
+{
+    margin: 0px;
+    border: inset;
+    border-color: rgb(0, 155, 0);
+}
+
+.navigation
+{
+    font-size: 25px;
 }

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="StyleSheets/main.css">    
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="StyleSheets/index.css">
+        <link rel="stylesheet" type="text/css" href="StyleSheets/main.css">
     </head>
-    <header class="header">
-        <h1>Combustible Lemonade</h1>
-        <p class="navigation">
-            <a href="music.html">music</a> &nbsp;
-            <a href="programming.html">programming</a>
-        </p>
-    </header>
+
+    <header></header>
+        
     <body>
+        <script type="text/javascript">
+            if (!window.jQuery){
+                document.write("<p>jQuery could not be loaded. *ded* <p>");
+            }
+            $("header").load("header.html");
+        </script>
+
         <div class="text">
             <p>Hello, and welcome to my website! My name is Jan, except on the internet, where I go under the pseudonym of Combustible Lemonade. I like making progressive music using LMMS, and I also like videogames (specifically Kerbal Space Program), and I often like to (try to) make games myself. </p>
             <p>Here's some music:</p>
