@@ -1,0 +1,60 @@
+h1
+{
+    margin-top: 0;
+    text-align: center;
+}
+
+header
+{
+    color: rgb(200, 200, 200);
+    background-color: rgba(25,80,55,1);
+    height: auto;
+}
+
+body
+{  
+    margin: 0px;
+    text-align: center;
+    color: rgb(200, 200, 200);
+
+    background-image: url(Screenshot%20from%202014-06-02%2010:55:30.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-attachment: fixed;
+}
+
+.text
+{
+    display: inline-block;
+    background-color: rgba(25,80,55,0.6);
+    max-width: 600px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.navigation
+{
+    font-size: 25px;
+}
+
+a:link
+{
+    color: yellow;
+    background-color: green;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+a:visited
+{
+    color: orange;
+}
+
+a:active
+{
+    color: orange;
+}
