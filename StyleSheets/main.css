@@ -3,6 +3,7 @@ h1
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+    font-size: 50px;
 }
 
 header
@@ -11,14 +12,14 @@ header
     background-color: rgba(25,80,55,0.8);
     margin-bottom: 10px;
     height: auto;
-    padding-bottom: 5px;
     width: 100%;
     position: fixed;
-    overflow: visible;
+    overflow: hidden;
+    white-space:nowrap;
 }
 
 body
-{  
+{
     margin: 0px;
     text-align: center;
     color: rgb(200, 200, 200);
@@ -72,18 +73,20 @@ a.one:hover
     margin: 0px;
     background-color: green;
     border: outset;
-    border-color: rgb(0, 155, 0);
+    border-color: rgb(156, 191, 137);
 }
 
 a.one:active
 {
     margin: 0px;
     border: inset;
-    border-color: rgb(0, 155, 0);
+    border-color: rgb(156, 191, 137);
 }
 
 .navigation
 {
     font-size: 25px;
     margin: 0px;
+    background-color: green;
+    padding: 5px;
 }
