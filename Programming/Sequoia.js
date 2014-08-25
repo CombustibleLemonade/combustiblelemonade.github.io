@@ -7,38 +7,49 @@
 
 var renderer, scene, camera, sphere, aspect, controls, stats, container, mirrorSphereCamera;
 
-function addSphere(geometry, material)
-{
+function addSphere(geometry, material) {
+	"use strict";
 	sphere = new THREE.Mesh(geometry, material);
-	sphere.position.x += Math.random()*20-10;
-	sphere.position.y += Math.random()*20-10;
-	sphere.position.z += Math.random()*20-10;
+	sphere.position.x += Math.random() * 20 - 10;
+	sphere.position.y += Math.random() * 20 - 10;
+	sphere.position.z += Math.random() * 20 - 10;
 	scene.add(sphere);
 }
 
-function webGLStart()
-{
+function animate() {
+	"use strict";
+
+	controls.update();
+
+	window.requestAnimationFrame(animate);
+	renderer.render(scene, camera);
+	stats.update();
+}
+
+function webGLStart() {
+	"use strict";
+
+	var geometry, mirror, material, pointLight;
+
 	renderer = new THREE.WebGLRenderer();
 	
-	aspect = window.innerWidth/window.innerHeight;
+	aspect = window.innerWidth / window.innerHeight;
 	camera = new THREE.PerspectiveCamera(90, aspect, 0.1, 1000);
-	camera.position.z=3;
+	camera.position.z = 3;
 	
 	scene = new THREE.Scene();
 	scene.add(camera);
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	$("body").append(renderer.domElement);
 	
-	var geometry = new THREE.SphereGeometry(1, 30, 15);
-	var mirror = new THREE.Mirror(renderer, camera);
-	var material = new THREE.MeshPhongMaterial();
+	geometry = new THREE.SphereGeometry(1, 30, 15);
+	mirror = new THREE.Mirror(renderer, camera);
+	material = new THREE.MeshPhongMaterial();
 	
-	for(var i = 0; i < 500; i++)
-	{
-		addSphere(geometry, material);
-	}
+	sphere = new THREE.Mesh(geometry, material);
+	scene.add(sphere);
 	
-	var pointLight = new THREE.PointLight();
+	pointLight = new THREE.PointLight();
 	pointLight.intensity = 1.0;
 	pointLight.position.x = 5;
 	pointLight.position.z = 5;
@@ -58,19 +69,11 @@ function webGLStart()
 	animate();
 }
 
-function onWindowResize()
-{
-	aspect = window.innerWidth/window.innerHeight;
+function onWindowResize() {
+	"use strict";
+
+	aspect = window.innerWidth / window.innerHeight;
 	camera.aspect = aspect;
-	alert("asdf");
+	camera.updateProjectionMatrix();
 	renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-function animate()
-{
-	controls.update();
-
-	window.requestAnimationFrame(animate);
-	renderer.render(scene, camera);
-	stats.update();
 }
