@@ -30,17 +30,30 @@ body
     background-attachment: fixed;
 }
 
+li
+{
+    text-align: left;
+}
+
+#linkselect
+{
+    z-index: -1;
+    position: fixed;
+    left: 300px;
+    background-color: rgb(200, 200, 200);
+    margin-top: -5px;
+    height: 39px;
+}
 
 .text
 {
     display: inline-block;
     background-color: rgba(25,80,55,0.8);
     max-width: 600px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
     margin-top: 100px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 a:link
@@ -70,16 +83,12 @@ a.one:visited
 
 a.one:hover
 {
-    margin: 0px;
-    background-color: green;
-    border: outset;
     border-color: rgb(156, 191, 137);
+    background-color: rgb(200, 200, 200);
 }
 
 a.one:active
 {
-    margin: 0px;
-    border: inset;
     border-color: rgb(156, 191, 137);
 }
 
@@ -87,6 +96,8 @@ a.one:active
 {
     font-size: 25px;
     margin: 0px;
-    background-color: green;
     padding: 5px;
+}
+h2 {
+    text-align: center;
 }
