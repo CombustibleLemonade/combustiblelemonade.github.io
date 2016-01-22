@@ -1,21 +1,19 @@
+html{
+    height: 100%;
+}
+
 h1
 {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 header
 {
-    color: rgb(200, 200, 200);
-    background-color: rgba(25,80,55,0.8);
-    margin-bottom: 10px;
-    height: auto;
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-    white-space:nowrap;
+    color: black;
+    background: linear-gradient(to left, lightgrey, white, white, lightgrey)
 }
 
 body
@@ -24,15 +22,17 @@ body
     text-align: center;
     color: rgb(200, 200, 200);
 
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
-    background-attachment: fixed;
+    background: linear-gradient(to left, lightgrey, lightblue, lightblue, lightblue, lightgrey);
 }
 
 li
 {
     text-align: left;
+    color: black;
+    
 }
 
 #linkselect
@@ -40,37 +40,39 @@ li
     z-index: -1;
     position: fixed;
     left: 300px;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(0, 0, 0);
     margin-top: -5px;
     height: 39px;
 }
 
 .text
 {
+    font-family: serif;
+    
     display: inline-block;
-    background-color: rgba(25,80,55,0.8);
-    max-width: 600px;
+    color: black;
+    background-color: lightcyan;
+    max-width: 800px;
     margin: 5px;
-    margin-top: 100px;
+    margin-top: 10px;
     padding: 10px;
     text-align: left;
 }
 
 a:link
 {
-    color: lightblue;
+    color: blue;
 }
 
 a:visited
 {
-    color: orange;
+    color: darkblue;
 }
 
 a.one:link
 {
     margin: 3px;
-    color: yellow;
-    background-color: rgba(0,0,0,0);
+    color: blue;
     padding: 2px;
     padding-left: 8px;
     padding-right: 8px;
@@ -78,13 +80,12 @@ a.one:link
 
 a.one:visited
 {
-    color: orange;
+    color: darkblue;
 }
 
 a.one:hover
 {
-    border-color: rgb(156, 191, 137);
-    background-color: rgb(200, 200, 200);
+    background: linear-gradient(rgba(255, 244, 255, 0), antiquewhite, rgba(255, 244, 255, 0));
 }
 
 a.one:active
